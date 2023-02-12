@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap");
+
+$font-size-primary: 18px;
+$font-size-secondary: 16px;
+$font-size-page-title: 32px;
+
+* {
+  font-family: "Comfortaa", cursive;
+  font-size: $font-size-primary;
+  color: $col-suponji;
+}
+
+.bold {
+  font-weight: 700;
+}

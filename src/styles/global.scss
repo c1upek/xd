@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+
+.main-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background-color: $col-background;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    header, main, footer {
+        padding: 0 2rem;
+    }
+
+    header, footer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    header {
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
