@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://pawelciupka.github.io/xd/",
+    "secure": false
+  }
+}
