@@ -1,34 +1,4 @@
-<div class="service-history-form">
-  <div>
-    <h5>Klient</h5>
-    <p-autoComplete
-      [(ngModel)]="selectedClient"
-      [suggestions]="filteredClients"
-      (completeMethod)="filterClients($event)"
-      (onSelect)="selectClient($event)"
-      field="name"
-      [dropdown]="true"
-    >
-    </p-autoComplete>
-  </div>
-
-  <div *ngIf="!!selectedClient">
-    <h5>Samochód klienta</h5>
-    <p-autoComplete
-      [(ngModel)]="selectedClientCar"
-      [suggestions]="filteredClientCars"
-      (completeMethod)="filterCars($event)"
-      (onSelect)="selectCar($event)"
-      field="fullName"
-      [dropdown]="true"
-    >
-    </p-autoComplete>
-  </div>
-</div>
-
-<div *ngIf="!!selectedClientCar">
-  <app-service-history-item
-    *ngFor="let item of serviceHistories"
-    [serviceHistory]="item"
-  ></app-service-history-item>
-</div>
+<app-service-history-item
+  *ngFor="let item of serviceHistories"
+  [serviceHistory]="item"
+></app-service-history-item>

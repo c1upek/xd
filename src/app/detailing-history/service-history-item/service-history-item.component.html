@@ -1,10 +1,14 @@
 <div class="service-history-item">
   <div class="data-group">
-    <p class="bold">Kiedy?</p>
+    <p class="bold">Termin wykonania:</p>
     <p class="value">{{ serviceHistory.date }}</p>
   </div>
   <div class="data-group">
-    <p class="bold">Co?</p>
+    <p class="bold">Koszt:</p>
+    <p class="value">{{ serviceHistory.price }}zł</p>
+  </div>
+  <div class="data-group">
+    <p class="bold">Opis wykonanej usługi:</p>
     <div [innerHTML]="serviceHistory.description"></div>
   </div>
 </div>

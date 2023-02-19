@@ -8,7 +8,12 @@ import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, GraphQLModule, HttpClientModule, DetailingHistoryModule],
+  imports: [
+    BrowserModule,
+    GraphQLModule,
+    HttpClientModule,
+    DetailingHistoryModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
