@@ -10,10 +10,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarServiceHistoryComponent } from './car-service-history/car-service-history.component';
 import { ButtonModule } from 'primeng/button';
 
-const routes: Routes = [
-  { path: 'service-histories/:id', component: CarServiceHistoryComponent },
-];
-
 @NgModule({
   declarations: [
     ServiceHistoriesComponent,
@@ -23,7 +19,6 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes),
     FormsModule,
     BrowserAnimationsModule,
     AutoCompleteModule,

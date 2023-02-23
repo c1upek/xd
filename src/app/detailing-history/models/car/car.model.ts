@@ -7,6 +7,7 @@ export class Car {
   public fullName!: string;
   public registrationNumber!: string;
   public clientId!: string;
+  public clientName!: string;
 
   constructor(dto: CarDto) {
     this.id = dto.id;
@@ -15,5 +16,6 @@ export class Car {
     this.fullName = `${dto.brand} ${dto.model}`;
     this.registrationNumber = dto.registrationNumber;
     this.clientId = dto.client.id;
+    this.clientName = `${dto.client.firstname} ${dto.client.lastname}`;
   }
 }

@@ -1,2 +1,9 @@
-Test
-<app-service-histories *ngIf="!!carId" [carId]="carId"></app-service-histories>
+<ng-container *ngIf="selectedCar">
+  <div class="car-details">
+    <h2>{{ selectedCar.fullName }}
+    </h2>
+    <h3>{{ selectedCar.clientName }}</h3>
+    <p-button class="qrcode-button" icon="pi pi-qrcode" ></p-button>
+  </div>
+  <app-service-histories [carId]="selectedCar.id"></app-service-histories>
+</ng-container>

@@ -1,0 +1,23 @@
+.car-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  .qrcode-button {
+    margin-top: 0.5rem;
+  }
+}

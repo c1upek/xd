@@ -4,8 +4,6 @@ import { CarDto } from '../models/car/car-dto.model';
 import { Car } from '../models/car/car.model';
 import { ClientDto } from '../models/client/client-dto.model';
 import { Client } from '../models/client/client.model';
-import { ServiceHistoryDto } from '../models/service-history/service-history-dto.model';
-import { ServiceHistory } from '../models/service-history/service-history.model';
 import { DetailingHistoryService } from '../services/detailing-history.service';
 
 @Component({
@@ -70,7 +68,6 @@ export class ServiceHistoryFormComponent implements OnInit {
   }
 
   public moveToCarHistory(): void {
-    console.log('moveToCarHistory');
     if (!this.selectedClientCar) {
       return;
     }
@@ -87,5 +84,4 @@ export class ServiceHistoryFormComponent implements OnInit {
   private resetSelectedClientCar() {
     this.selectedClientCar = null;
   }
-  
 }

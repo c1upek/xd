@@ -40,7 +40,6 @@ export class DetailingHistoryService {
       `,
     }).valueChanges;
   }
-  
 
   public getClientCars(clientId: string): any {
     return this._apollo.watchQuery({
@@ -53,6 +52,28 @@ export class DetailingHistoryService {
             registrationNumber
             client {
               id
+              firstname
+              lastname
+            }
+          }
+        }
+      `,
+    }).valueChanges;
+  }
+
+  public getCar(carId: string): any {
+    return this._apollo.watchQuery({
+      query: gql`
+        {
+          car(where: {id: "${carId}"}) {
+            id
+            brand
+            model
+            registrationNumber
+            client {
+              id
+              firstname
+              lastname
             }
           }
         }

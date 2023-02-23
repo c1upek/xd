@@ -8,6 +8,7 @@ import { ServiceHistory } from '../models/service-history/service-history.model'
 })
 export class ServiceHistoryItemComponent implements OnInit {
   @Input() serviceHistory!: ServiceHistory;
+  @Input() index!: number;
 
   constructor() {}
 

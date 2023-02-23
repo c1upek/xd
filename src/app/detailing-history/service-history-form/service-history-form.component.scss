@@ -1,6 +1,12 @@
 .service-history-form {
-    display: grid;
-    grid-row-gap: 0.75rem;
-    margin-bottom: 2rem;
-    width: fit-content;
+  display: grid;
+  grid-row-gap: 0.75rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

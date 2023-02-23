@@ -1,4 +1,5 @@
 <app-service-history-item
-  *ngFor="let item of serviceHistories"
+  *ngFor="let item of serviceHistories; index as i"
   [serviceHistory]="item"
+  [index]="i+1"
 ></app-service-history-item>

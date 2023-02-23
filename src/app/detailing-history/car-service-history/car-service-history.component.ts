@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Car } from '../models/car/car.model';
+import { DetailingHistoryService } from '../services/detailing-history.service';
 
 @Component({
   selector: 'app-car-service-history',
@@ -7,17 +9,20 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./car-service-history.component.scss'],
 })
 export class CarServiceHistoryComponent implements OnInit {
-  public carId!: string;
+  public selectedCar: Car | undefined;
 
-  constructor(private _route: ActivatedRoute) {}
+  constructor(
+    private _route: ActivatedRoute,
+    private _detailingHistoryService: DetailingHistoryService
+  ) {}
 
   ngOnInit(): void {
-    let id = +this._route.snapshot.params['id'];
-    console.log('car-service-history', id);
+    this.getCar(this._route.snapshot.params['id']);
+  }
 
-    this._route.params.subscribe((params: Params) => {
-      id = +params['id'];
-      console.log('hotel' + id);
+  private getCar(carId: string): void {
+    this._detailingHistoryService.getCar(carId).subscribe((result: any) => {
+      this.selectedCar = new Car(result.data.car);
     });
   }
 }
