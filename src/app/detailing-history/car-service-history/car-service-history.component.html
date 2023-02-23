@@ -1,9 +1,21 @@
 <ng-container *ngIf="selectedCar">
   <div class="car-details">
-    <h2>{{ selectedCar.fullName }}
-    </h2>
+    <h2>{{ selectedCar.fullName }}</h2>
     <h3>{{ selectedCar.clientName }}</h3>
-    <p-button class="qrcode-button" icon="pi pi-qrcode" ></p-button>
+    <p-button
+      class="qrcode-button"
+      icon="pi pi-qrcode"
+      (onClick)="toggleQrcodeVisibility()"
+    ></p-button>
+    <div class="qrcode-container">
+      <ngx-qrcode
+        *ngIf="isQrcodeVisible"
+        [elementType]="elementType"
+        [value]="url"
+        [errorCorrectionLevel]="correctionLevel"
+      >
+      </ngx-qrcode>
+    </div>
   </div>
   <app-service-histories [carId]="selectedCar.id"></app-service-histories>
 </ng-container>

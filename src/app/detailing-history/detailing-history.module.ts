@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
 import { ServiceHistoryFormComponent } from './service-history-form/service-history-form.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CarServiceHistoryComponent } from './car-service-history/car-service-history.component';
 import { ButtonModule } from 'primeng/button';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,13 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     BrowserAnimationsModule,
     AutoCompleteModule,
-    ButtonModule
+    ButtonModule,
+    NgxQRCodeModule,
   ],
-  exports: [RouterModule, ServiceHistoryFormComponent, CarServiceHistoryComponent],
+  exports: [
+    RouterModule,
+    ServiceHistoryFormComponent,
+    CarServiceHistoryComponent,
+  ],
 })
 export class DetailingHistoryModule {}
