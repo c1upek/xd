@@ -7,14 +7,8 @@
       icon="pi pi-qrcode"
       (onClick)="toggleQrcodeVisibility()"
     ></p-button>
-    <div class="qrcode-container">
-      <ngx-qrcode
-        *ngIf="isQrcodeVisible"
-        [elementType]="elementType"
-        [value]="url"
-        [errorCorrectionLevel]="correctionLevel"
-      >
-      </ngx-qrcode>
+    <div class="qrcode-container" *ngIf="isQrcodeVisible">
+      <qr-code [value]="url" size="300" errorCorrectionLevel="M"></qr-code>
     </div>
   </div>
   <app-service-histories [carId]="selectedCar.id"></app-service-histories>

@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {
-  NgxQrcodeElementTypes,
-  NgxQrcodeErrorCorrectionLevels,
-} from '@techiediaries/ngx-qrcode';
 import { Car } from '../models/car/car.model';
 import { DetailingHistoryService } from '../services/detailing-history.service';
 
@@ -13,8 +9,6 @@ import { DetailingHistoryService } from '../services/detailing-history.service';
   styleUrls: ['./car-service-history.component.scss'],
 })
 export class CarServiceHistoryComponent implements OnInit {
-  public elementType = NgxQrcodeElementTypes.URL;
-  public correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
   public isQrcodeVisible: boolean = false;
 
   public selectedCar: Car | undefined;

@@ -9,7 +9,7 @@ import { ServiceHistoryFormComponent } from './service-history-form/service-hist
 import { RouterModule } from '@angular/router';
 import { CarServiceHistoryComponent } from './car-service-history/car-service-history.component';
 import { ButtonModule } from 'primeng/button';
-import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QrCodeModule } from 'ng-qrcode';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
     BrowserAnimationsModule,
     AutoCompleteModule,
     ButtonModule,
-    NgxQRCodeModule,
+    QrCodeModule,
   ],
   exports: [
     RouterModule,
