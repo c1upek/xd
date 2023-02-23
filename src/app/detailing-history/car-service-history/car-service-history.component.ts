@@ -13,6 +13,7 @@ export class CarServiceHistoryComponent implements OnInit {
 
   ngOnInit(): void {
     let id = +this._route.snapshot.params['id'];
+    console.log('car-service-history', id);
 
     this._route.params.subscribe((params: Params) => {
       id = +params['id'];

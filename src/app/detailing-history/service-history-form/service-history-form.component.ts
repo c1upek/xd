@@ -22,8 +22,6 @@ export class ServiceHistoryFormComponent implements OnInit {
   public filteredClientCars: Car[] = [];
   public selectedClientCar: Car | null = null;
 
-  public serviceHistories: ServiceHistory[] = [];
-
   constructor(
     private _router: Router,
     private _detailingHistoryService: DetailingHistoryService
@@ -53,8 +51,8 @@ export class ServiceHistoryFormComponent implements OnInit {
   }
 
   public selectClient(client: Client): void {
-    this.clientCars = [];
-    this.selectedClientCar = null;
+    this.resetClientCars();
+    this.resetSelectedClientCar();
     this.selectedClient = client;
 
     this._detailingHistoryService
@@ -69,16 +67,6 @@ export class ServiceHistoryFormComponent implements OnInit {
 
   public selectCar(car: Car): void {
     this.selectedClientCar = car;
-
-    this._detailingHistoryService
-      .getCarServiceHistories(car.id)
-      .subscribe((result: any) => {
-        result.data.serviceHistories.forEach(
-          (serviceHistoryDto: ServiceHistoryDto) => {
-            this.serviceHistories.push(new ServiceHistory(serviceHistoryDto));
-          }
-        );
-      });
   }
 
   public moveToCarHistory(): void {
@@ -91,4 +79,13 @@ export class ServiceHistoryFormComponent implements OnInit {
       `/service-histories/${this.selectedClientCar.id}`
     );
   }
+
+  private resetClientCars() {
+    this.clientCars = [];
+  }
+
+  private resetSelectedClientCar() {
+    this.selectedClientCar = null;
+  }
+  
 }

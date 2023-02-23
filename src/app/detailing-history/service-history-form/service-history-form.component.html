@@ -24,11 +24,13 @@
     </p-autoComplete>
   </div>
 
-  <div *ngIf="!!selectedClientCar">
-    <button (click)="moveToCarHistory()">
-      Wyświetl historię i wygeneruj QR
-    </button>
-  </div>
+  <button
+    pButton
+    type="button"
+    label="Otwórz historię"
+    *ngIf="!!selectedClientCar"
+    (click)="moveToCarHistory()"
+  ></button>
 </div>
 
 <app-service-histories

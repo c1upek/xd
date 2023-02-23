@@ -6,9 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
 import { ServiceHistoryFormComponent } from './service-history-form/service-history-form.component';
-import { DetailingHistoryComponent } from './detailing-history.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CarServiceHistoryComponent } from './car-service-history/car-service-history.component';
+import { ButtonModule } from 'primeng/button';
 
 const routes: Routes = [
   { path: 'service-histories/:id', component: CarServiceHistoryComponent },
@@ -19,7 +19,6 @@ const routes: Routes = [
     ServiceHistoriesComponent,
     ServiceHistoryItemComponent,
     ServiceHistoryFormComponent,
-    DetailingHistoryComponent,
     CarServiceHistoryComponent,
   ],
   imports: [
@@ -28,6 +27,7 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     AutoCompleteModule,
+    ButtonModule
   ],
   exports: [RouterModule, ServiceHistoryFormComponent, CarServiceHistoryComponent],
 })
