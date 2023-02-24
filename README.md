@@ -1,27 +1,22 @@
-# Xd
+# Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
-## Development server
+## Commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to initialize the project.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
+Run `ng serve` for a dev server available on `http://localhost:4200/`.
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Run `ng deploy` to build and deploy project to the.
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## How to adapt the code to a new project?
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Search for `xd` and replace all occurrences with the new project name.
+2. In the GitHub project repository go to `Settings -> Pages` and select branch to `gh-pages` and folder to `/(root)`.
+3. Go to `proxy.conf.json` and change github page name.
+4. Go to `angular.json` file, move to `deploy -> options -> baseHref` and change github page name, to set deploy destination.
